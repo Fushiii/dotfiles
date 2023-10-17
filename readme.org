@@ -1,0 +1,6 @@
+#+author: fushi
+#+title: My personal dotfiles.
+#+description: This repo is meant to be used as a safe ground for every configuration i use between my machines.
+
+* What is on this repo:
+There is a few configurations meant to be deployed by home-manager, nothing more.

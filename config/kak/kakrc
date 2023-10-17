@@ -1,0 +1,18 @@
+colorscheme oxocarbon
+
+# Disable assistants.
+# Sorry, you take too much space.
+set-option global ui_options ncurses_assistant=off
+set-option global ui_options terminal_assistant="none"
+
+# Set up the files for kak-lsp.
+# Note: this makes it easier to control things.
+nop %sh{
+   if [ ! -e "$XDG_CONFIG_HOME/kak-lsp" ]; then
+        ln -s "$kak_config/config/kak-lsp" "$XDG_CONFIG_HOME/kak-lsp"
+    fi
+
+}
+
+
+source "%val{config}/autoloader.kak"
