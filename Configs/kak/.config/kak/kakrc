@@ -1,5 +1,8 @@
-colorscheme oxocarbon
+colorscheme generated
 
+# Enable the lsp client.
+# Note: should this be here?
+eval %sh{kak-lsp --kakoune -s $kak_session}
 
 # Set up the files for kak-lsp.
 # Note: this makes it easier to control things.
@@ -10,5 +13,4 @@ nop %sh{
 
 }
 
-
-source "%val{config}/autoloader.kak"
+source "%val{config}/loader.kak"

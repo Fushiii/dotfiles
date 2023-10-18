@@ -1,7 +1,9 @@
 * {
+    primary-color:               #EF9595;
+    
     background:                  #202124;
     background-alt:              #2E2F32;
-    background-selected:         #82CFFF;
+    background-selected:         @primary-color;
 
     foreground:                  #f0f8ff;
     foreground-alt:              @background-alt;
