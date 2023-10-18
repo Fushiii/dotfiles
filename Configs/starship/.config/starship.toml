@@ -14,11 +14,8 @@ $git_status\
 []\
 (bold bg:none fg:purple) \
 $nix_shell\
-$memory_usage\
-$env_var\
 [バカ](bold bg:none fg:white)\
 $directory\
-$status\
 $character  \
 """
 
