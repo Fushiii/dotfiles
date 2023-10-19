@@ -20,10 +20,6 @@
         "x86_64-linux"
       ];
 
-      imports = [
-        inputs.flake-parts.flakeModules.easyOverlay
-      ];
-
 
       perSystem = { config, self', inputs', pkgs, system, ... }:
         let

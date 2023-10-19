@@ -1,8 +1,17 @@
-colorscheme generated
+# Bootstrap and load the plugin manager.
+# Note: loading the user libray should be done after this.
+evaluate-commands %sh{
+  plugins="$kak_config/bundle"
+  mkdir -p "$plugins"
+  [ ! -e "$plugins/kak-bundle" ] && \
+    git clone -q https://github.com/jdugan6240/kak-bundle "$plugins/kak-bundle"
+  printf "%s\n" "source '$plugins/kak-bundle/rc/kak-bundle.kak'"
+}
+bundle-noload kak-bundle https://github.com/jdugan6240/kak-bundle
 
-# Enable the lsp client.
-# Note: should this be here?
-eval %sh{kak-lsp --kakoune -s $kak_session}
+# Load the user configuration.
+# Note this is done after laoding bundle.
+source "%val{config}/user.kak"
 
 # Set up the files for kak-lsp.
 # Note: this makes it easier to control things.
