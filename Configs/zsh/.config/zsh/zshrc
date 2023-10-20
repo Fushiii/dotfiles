@@ -1,0 +1,10 @@
+# The plugin manager for this config.
+# This needs to be the first thing loaded, as things depend on this.
+source ~/.config/zsh/antigen.zsh
+
+# This loads all of the files in ~/.config/zsh/lib.
+source ~/.config/zsh/loader.zsh
+
+# This makes antigen install the plugins.
+# Without this, you have to call it manually.
+antigen apply
