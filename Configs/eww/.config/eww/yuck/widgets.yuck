@@ -1,4 +1,3 @@
-(include "./yuck/widgets/notification.yuck")
 (include "./yuck/widgets/media.yuck")
 (include "./yuck/widgets/weather.yuck")
 (include "./yuck/widgets/sys_sliders.yuck")

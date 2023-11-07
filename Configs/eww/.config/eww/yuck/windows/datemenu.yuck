@@ -22,9 +22,8 @@
       :class "system"
       (sysprogress_cpu)
       (sysprogress_ram)
-      (sysprogress_temp)
-      (sysprogress_bat))
-    (box :class "events widget" (events))
+    )
+    
     ;; (for player in {media.players}
       ;;     (media_player :player player ))
     ;; (box :class "wallpaper module")

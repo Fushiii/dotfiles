@@ -4,7 +4,7 @@
     :class "media-window"
     :space-evenly false
     (for player in {media.players}
-        (box
-            :halign "start"
-            (media_player :player player )))
-))
+      (box
+        :halign "start"
+        (media_player :player player )))
+  ))
