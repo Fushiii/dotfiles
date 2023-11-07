@@ -86,12 +86,7 @@
     )
   ))
 
-(defvar bluetooth_reveal false)
-(defvar bt_speaker_reveal false)
 (defvar mute_reveal false)
-(defvar notifications_reveal false)
-(defvar battery_reveal false)
-(defvar network_reveal false)
 (defvar volume_reveal false)
 (defvar screen_reveal false)
 (defwidget panel_controls [orientation] (box
