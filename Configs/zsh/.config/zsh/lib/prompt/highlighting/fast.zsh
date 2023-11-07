@@ -1,1 +1,1 @@
-antigen bundle zdharma-continuum/fast-syntax-highlighting
+zi light zdharma-continuum/fast-syntax-highlighting

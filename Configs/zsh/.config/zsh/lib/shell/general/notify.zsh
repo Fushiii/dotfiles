@@ -1,1 +1,1 @@
-antigen bundle "MichaelAquilina/zsh-auto-notify"
+zi light "MichaelAquilina/zsh-auto-notify"

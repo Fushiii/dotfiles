@@ -7,7 +7,7 @@ window {
   
     border:                  	    2px;
     border-radius:                  10px;
-    border-color:                   @background-selected;
+    border-color:                   @base03;
     
     y-offset: 0;
     x-offset: -10px;
@@ -21,13 +21,13 @@ listview {
     columns:                        1;
     lines:			                2;
 
-    text-color:       @foreground;
-    background-color: @background;
+    text-color:       @base03;
+    background-color: @base00;
 }
 
 mainbox {
     padding: 5px;
-    background-color: @background;
+    background-color: @base00;
     // So that the prompt does not appear.
     children:                       [ listview ];
 }
@@ -36,8 +36,8 @@ element {
     border-radius:                  5px;
     padding:                        10px;
 
-    text-color:                     @foreground;
-    background-color:               @background;
+    text-color:                     @base03;
+    background-color:               @base00;
 }
 
 element-text {
@@ -54,7 +54,7 @@ element-text {
 }
 
 element selected {
-    text-color:                     @foreground-selected;
-    background-color:               @background-selected;
+    text-color:                     @base00;
+    background-color:               @base02;
 }
 

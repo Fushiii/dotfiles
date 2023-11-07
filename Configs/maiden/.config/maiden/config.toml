@@ -1,13 +1,6 @@
 [imports] 
 paths = [ 
-   "generated.toml", "lib/nix.toml", "lib/nixos.toml"
+   "generated.toml",
+   "lib/nix.toml",
+   "lib/nixos.toml"
 ]
-
-# This is a test command.
-# Note: this should merge with the options in other files,
-# essentialy making the configuration more modular and less hacky.
-[launch.powermenu]
-bin = "/home/fushiii/.config/hypr/config/rofi/bin/powermenu"
-
-[launch.launcher]
-bin = "/home/fushiii/.config/hypr/config/rofi/bin/launcher"

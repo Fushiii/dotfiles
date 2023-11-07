@@ -1,1 +1,1 @@
-antigen bundle zsh-users/zsh-history-substring-search
+zi light zsh-users/zsh-history-substring-search

@@ -1,1 +1,1 @@
-antigen bundle Aloxaf/fzf-tab
+zi light Aloxaf/fzf-tab

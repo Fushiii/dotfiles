@@ -1,1 +1,1 @@
-antigen bundle hlissner/zsh-autopair
+zi light hlissner/zsh-autopair

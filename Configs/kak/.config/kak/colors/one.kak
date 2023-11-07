@@ -1,1 +1,1 @@
-/home/fushiii/.config/kak/bundle/one.kak
+/home/enmei/.config/kak/bundle/one.kak

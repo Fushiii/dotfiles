@@ -1,1 +1,1 @@
-antigen bundle zsh-users/zsh-completions
+zi light zsh-users/zsh-completions
