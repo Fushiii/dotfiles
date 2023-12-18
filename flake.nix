@@ -1,45 +1,46 @@
 {
-  description = "Description for the project";
+  description = "Flake for setting up the system.";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    zelda.url = "github:enmeei/zelda";
   };
 
-  outputs = inputs@{ self, flake-parts,  ... }:
+  outputs = inputs@{ self, flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
 
-      systems = [
-        "x86_64-linux"
-      ];
-
+      systems = inputs.nixpkgs.lib.systems.flakeExposed;
 
       perSystem = { config, self', inputs', pkgs, system, ... }:
-      let
-	      nixpkgs-channel = "nixos-stable";
-       in
+        let
+
+        in
         rec
         {
+          _module.args = {
+            pkgs = import inputs.nixpkgs {
+              # This makes the nixpkgs be the one
+              # suited to your current development system;
+              inherit system;
 
-          _module.args.pkgs = import inputs.nixpkgs {
-            inherit system;
-
-		config = {
-	    		allowUnfree = true;
-
-		};
+              overlays = with inputs; [
+                zelda.overlays.default
+              ];
+            };
           };
 
           devShells = {
             development = pkgs.mkShell {
-		buildInputs = with pkgs; [
-    		   tuckr
-		];
+              buildInputs = with pkgs; [
+                zelda
+              ];
             };
-
           };
-         devShells.default = devShells.development;
+          devShells.default = devShells.development;
 
         };
 
     };
 }
+

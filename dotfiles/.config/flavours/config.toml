@@ -1,0 +1,70 @@
+schemes = "https://github.com/enmeei/base16-schemes-source"
+templates = "https://github.com/enmeei/base16-templates-source"
+
+[[item]]
+file = "~/.config/kitty/base16.conf"
+template = "kitty"
+hook = "kitten @ set-colors --all --configured ~/.config/kitty/base16.conf"
+rewrite = true
+
+[[item]]
+file = "~/.themes/base16/colors3"
+template = "gtk-flatcolor"
+subtemplate = "gtk-3"
+rewrite = true
+hook = "timeout 0.2 xsettingsd"
+
+[[item]]
+file = "~/.themes/base16/colors2"
+template = "gtk-flatcolor"
+subtemplate = "gtk-2"
+rewrite = true
+hook = "timeout 0.2 xsettingsd"
+
+[[item]]
+file = "~/.config/eww/scss/base16.scss"
+template = "styles"
+subtemplate = "scss"
+rewrite = true
+
+[[item]]
+file = "~/.config/hypr/config/rofi/base16.rasi"
+template = "rofi"
+rewrite = true
+
+[[item]]
+file = "~/.config/kakoune/colors/base16.kak"
+template = "kakoune"
+rewrite = true
+
+[[item]]
+file = "~/.cache/wal/colors.json"
+template = "firefox"
+rewrite = true
+hook = "pywalfox update"
+
+[[item]]
+file = "~/.Xresources"
+template = "xresources"
+rewrite = true
+hook = "xrdb -merge ~/.Xresources && ~/.config/hypr/assets/./apply.sh"
+
+[item.light]
+file = "~/.Xresources"
+template = "xresources"
+rewrite = true
+hook = "xrdb -merge ~/.Xresources && ~/.config/hypr/assets/./apply.sh --theme light"
+
+[[item]]
+file = "~/.config/taste/icons.csv"
+template = "serialization"
+subtemplate = "csv"
+rewrite = true
+hook = "~/.icons/./apply.sh"
+
+[item.light]
+file = "~/.config/taste/icons.csv"
+template = "serialization"
+subtemplate = "csv"
+rewrite = true
+hook = "~/.icons/./apply.sh"

@@ -1,1 +1,0 @@
-eval (starship init elvish --print-full-init | sed 's/except/catch/' | slurp)

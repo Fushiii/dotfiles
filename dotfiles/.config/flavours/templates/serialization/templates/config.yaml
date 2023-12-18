@@ -1,0 +1,23 @@
+json:
+    extension: .json
+    output: themes
+
+toml:
+    extension: .toml
+    output: themes
+
+yaml:
+    extension: .yaml
+    output: themes
+
+csv:
+    extension: .csv
+    output: themes
+
+ini:
+    extension: .ini
+    output: themes
+
+xml:
+    extension: .xml
+    output: themes
