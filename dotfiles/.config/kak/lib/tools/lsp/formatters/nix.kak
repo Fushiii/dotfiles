@@ -1,4 +1,7 @@
-hook global WinSetOption filetype=nix %{
-     hook window BufWritePre .* lsp-formatting-sync
-}
+hook global WinSetOption filetype=(nix) %{
+    set-option global formatcmd "alejandra"
+    hook window BufWritePre .*  %{
+    	format
+    }
 
+}

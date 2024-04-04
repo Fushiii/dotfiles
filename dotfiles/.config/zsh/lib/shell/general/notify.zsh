@@ -1,1 +1,1 @@
-zi light "MichaelAquilina/zsh-auto-notify"
+zi load "MichaelAquilina/zsh-auto-notify"

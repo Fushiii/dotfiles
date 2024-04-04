@@ -1,0 +1,19 @@
+layout {
+    tab {
+        pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+        pane split_direction="vertical" {
+            pane split_direction="horizontal" size="70%" {
+                pane name="editor"
+                pane name="build" {
+                    size 10
+                }
+            }
+            pane stacked=true {
+		pane
+                pane
+            }
+        }
+    }
+}

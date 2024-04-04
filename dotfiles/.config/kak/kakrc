@@ -1,5 +1,3 @@
-# Bootstrap and load the plugin manager.
-# Note: loading the user libray should be done after this.
 evaluate-commands %sh{
   plugins="$kak_config/bundle"
   mkdir -p "$plugins"
@@ -7,19 +5,12 @@ evaluate-commands %sh{
     git clone -q https://github.com/jdugan6240/kak-bundle "$plugins/kak-bundle"
   printf "%s\n" "source '$plugins/kak-bundle/rc/kak-bundle.kak'"
 }
+
 bundle-noload kak-bundle https://github.com/jdugan6240/kak-bundle
 
+set global startup_info_version 20240228
+ 
 # Load the user configuration.
 # Note this is done after laoding bundle.
 source "%val{config}/user.kak"
-
-# Set up the files for kak-lsp.
-# Note: this makes it easier to control things.
-nop %sh{
-   if [ ! -e "$XDG_CONFIG_HOME/kak-lsp" ]; then
-        ln -s "$kak_config/config/kak-lsp" "$XDG_CONFIG_HOME/kak-lsp"
-    fi
-
-}
-
-source "%val{config}/loader.kak"
+source "%val{config}/linker.kak"

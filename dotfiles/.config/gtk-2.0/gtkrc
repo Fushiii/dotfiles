@@ -1,2 +1,3 @@
 gtk-theme-name="base16"
-gtk-icon-theme-name="base16"
+gtk-cursor-theme-name="base16-cursors"
+gtk-icon-theme-name="base16-icons"

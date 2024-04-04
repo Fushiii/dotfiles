@@ -1,1 +1,1 @@
-zi light zsh-users/zsh-completions
+zi load zsh-users/zsh-completions

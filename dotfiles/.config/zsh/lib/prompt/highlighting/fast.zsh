@@ -1,1 +1,1 @@
-zi light zdharma-continuum/fast-syntax-highlighting
+zi load zdharma-continuum/fast-syntax-highlighting

@@ -1,6 +1,7 @@
 # Ignore the build files from nix.
 **/*/result
 **/*/generated.kak
+autoload
 
 
 # Commonly used caches for shells.
@@ -9,7 +10,3 @@
 
 # Plugin manager files.
 bundle
-
-# This is a symlink.
-autoload/user-library
-autoload/system-library

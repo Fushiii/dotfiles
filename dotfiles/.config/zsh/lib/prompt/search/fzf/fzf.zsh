@@ -1,1 +1,1 @@
-zi light unixorn/fzf-zsh-plugin
+zi load unixorn/fzf-zsh-plugin

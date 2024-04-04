@@ -1,0 +1,6 @@
+configuration {
+     kb-row-left: "Alt+h";
+     kb-row-right: "Alt+l";
+     kb-row-up: "Alt+k";
+     kb-row-down: "Alt+j";
+}

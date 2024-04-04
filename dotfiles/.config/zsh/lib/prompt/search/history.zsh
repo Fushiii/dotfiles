@@ -1,1 +1,1 @@
-zi light zsh-users/zsh-history-substring-search
+zi load zsh-users/zsh-history-substring-search

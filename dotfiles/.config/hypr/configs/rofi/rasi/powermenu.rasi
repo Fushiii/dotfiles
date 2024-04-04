@@ -1,0 +1,37 @@
+//----- Global Properties -----//
+
+@import "../global.rasi"
+@import "keybinds/non-typing.rasi"
+
+window {
+     width: 5%;
+     
+     // y-offset: 0;
+     // x-offset: -10px;
+
+     // anchor: center;
+     // location: east;
+
+     y-offset: 0;
+     x-offset: 10px;
+
+     anchor: center;
+     location: west;
+}
+
+listview {
+     columns: 1;
+     lines: 6;
+}
+
+mainbox {
+     padding: 0.25%;
+     children: [ 
+        listview 
+     ];
+}
+
+element-text {
+     horizontal-align: 0.5;
+     padding: 1.5%;
+}

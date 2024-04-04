@@ -1,0 +1,6 @@
+configuration {
+     kb-row-left: "h,a";
+     kb-row-right: "l,d";
+     kb-row-up: "k,w";
+     kb-row-down: "j,s";
+}

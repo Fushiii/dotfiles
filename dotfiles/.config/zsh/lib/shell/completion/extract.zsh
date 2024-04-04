@@ -1,1 +1,1 @@
-zi light thetic/extract
+# zi load thetic/extract

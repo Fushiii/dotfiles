@@ -1,29 +1,37 @@
+# format = """
+# [  $username$hostname ]\
+# (bold bg:black fg:white)\
+# []\
+# (bold bg:purple fg:black)\
+# [\
+# $git_branch\
+# $git_commit\
+# $git_state\
+# $git_metrics\
+# $git_status\
+# ]\
+# (bold bg:purple fg:black)\
+# []\
+# (bold bg:none fg:purple) \
+# $nix_shell\
+# [バカ](bold bg:none fg:white)\
+# $directory\
+# $character  \
+# """
 format = """
-[  $username$hostname ]\
-(bold bg:black fg:white)\
-[]\
-(bold bg:purple fg:black)\
-[\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
-]\
-(bold bg:purple fg:black)\
-[]\
+[$username$hostname]\
 (bold bg:none fg:purple) \
-$nix_shell\
-[バカ](bold bg:none fg:white)\
 $directory\
-$character  \
+$character \
 """
+
+command_timeout = 100000
 
 [fill]
 symbol = " "
 
 [username]
-show_always = true
+show_always = false
 format = "[$user]($style)"
 style_user = "bold bg:black fg:white"
 style_root = "bold bg:black fg:white"
@@ -49,8 +57,8 @@ style = "bold bg:purple fg:black"
 
 [directory]
 read_only = " "
-truncation_length = 3
-truncation_symbol = "./"
+truncation_length = 8
+truncation_symbol = "../"
 style = "bold bg:none fg:yellow"
 
 [status]

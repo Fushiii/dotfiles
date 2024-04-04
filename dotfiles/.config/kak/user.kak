@@ -4,4 +4,3 @@ evaluate-commands %sh{
     printf 'source "%s"\n' "$file"
   done
 }
-

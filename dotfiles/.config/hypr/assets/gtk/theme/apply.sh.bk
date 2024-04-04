@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+
+theme_assets_path="$HOME/.confi/hypr/assets/theme"
+theme_path="$HOME/.themes/base16"
+
+#check_link() {
+#	echo "checking links"
+#	if [ -L "$theme_path/colors2" ] && [ -L "$theme_path/colors3" ]; then
+#		link_target_colors2=$(readlink "$theme_path/colors2")
+#		link_target_colors3=$(readlink "$theme_path/colors3")
+#		echo "Link target: link_target_colors2"
+#		echo "Link target: link_target_colors3"
+#
+#		if [ "$link_target_colors2" != "$theme_path/colors2" ] || [ "$link_target_colors3" != "$theme_path/colors3" ]; then
+#			unlink "$theme_path/colors2"
+#			unlink "$theme_path/colors3"
+#			ln -s "$theme_assets_path/colors2" "$theme_path/colors2"
+#			ln -s "$theme_assets_path/colors3" "$theme_path/colors3"
+#		fi
+#	elif [ ! -e "$theme_path" ]; then
+#		echo "Deleting and linking colors2"
+#		echo "Deleting and linking colors3"
+#
+#		rm "$theme_path/colors2"
+#		rm "$theme_path/colors3"
+#		ln -s "$theme_assets_path/colors2" "$theme_path/colors2"
+#		ln -s "$theme_assets_path/colors3" "$theme_path/colors3"
+#	fi
+#}
+check_link() {
+	echo "checking links"
+	if [ -L "$theme_path/colors2" ] && [ -L "$theme_path/colors3" ]; then
+		link_target_colors2=$(readlink "$theme_path/colors2")
+		link_target_colors3=$(readlink "$theme_path/colors3")
+		echo "Link target: $link_target_colors2"
+		echo "Link target: $link_target_colors3"
+
+		if [ "$link_target_colors2" != "$theme_assets_path/colors2" ] || [ "$link_target_colors3" != "$theme_assets_path/colors3" ]; then
+			unlink "$theme_path/colors2"
+			unlink "$theme_path/colors3"
+			ln -s "$theme_assets_path/colors2" "$theme_path/colors2"
+			ln -s "$theme_assets_path/colors3" "$theme_path/colors3"
+		fi
+	elif [ ! -e "$theme_path" ]; then
+		echo "Deleting and linking colors2"
+		echo "Deleting and linking colors3"
+
+		rm "$theme_path/colors2"
+		rm "$theme_path/colors3"
+		ln -s "$theme_assets_path/colors2" "$theme_path/colors2"
+		ln -s "$theme_assets_path/colors3" "$theme_path/colors3"
+	fi
+}
+
+main() {
+	while [[ $# -gt 0 ]]; do
+		case "$1" in
+		check)
+			shift
+			check_link
+			exit 1
+			;;
+		*)
+			echo "Unknown argument: $1"
+			exit 1
+			;;
+		esac
+		shift
+	done
+
+}
+
+main "$@"

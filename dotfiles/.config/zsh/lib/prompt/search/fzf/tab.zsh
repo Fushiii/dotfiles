@@ -1,1 +1,1 @@
-zi light Aloxaf/fzf-tab
+zi load Aloxaf/fzf-tab

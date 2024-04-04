@@ -1,0 +1,110 @@
+schemes = "https://github.com/enmeei/base16-schemes-source"
+templates = "https://github.com/enmeei/base16-templates-source"
+
+[[item]]
+file = "~/.config/kitty/base16.conf"
+template = "kitty"
+hook = "kitten @ set-colors --all --configured ~/.config/kitty/base16.conf"
+rewrite = true
+
+
+[[item]]
+file = "~/.config/hypr/configs/eww/scss/base16.scss"
+template = "styles"
+subtemplate = "scss"
+rewrite = true
+
+[[item]]
+file = "~/.config/hypr/configs/rofi/base16.rasi"
+template = "rofi"
+rewrite = true
+
+[[item]]
+file = "~/.config/kak/colors/base16.kak"
+template = "kakoune"
+rewrite = true
+
+[[item]]
+file = "~/.config/mako/config"
+template = "mako"
+hook = "makoctl reload"
+
+
+[[item]]
+file = "~/.config/hypr/configs/taste/wallpaper.csv"
+template = "serialization"
+subtemplate = "csv"
+rewrite = true
+hook = "~/.config/hypr/assets/wallpaper/apply.sh"
+lightweight = false
+
+[item.light]
+file = "~/.config/hypr/configs/taste/wallpaper.csv"
+template = "serialization"
+subtemplate = "csv"
+rewrite = true
+hook = "~/.config/hypr/assets/wallpaper/apply.sh --theme light"
+lightweight = false
+
+[[item]]
+file = "~/.config/hypr/configs/taste/cursors.csv"
+template = "serialization"
+subtemplate = "csv"
+rewrite = true
+hook = "~/.config/hypr/assets/gtk/cursors/apply.sh"
+lightweight = false
+
+[item.light]
+file = "~/.config/hypr/configs/taste/cursors.csv"
+template = "serialization"
+subtemplate = "csv"
+rewrite = true
+hook = "~/.config/hypr/assets/gtk/cursors/apply.sh --theme light"
+lightweight = false
+
+[[item]]
+file = "~/.config/hypr/configs/taste/icons.csv"
+template = "serialization"
+subtemplate = "csv"
+rewrite = true
+hook = "~/.config/hypr/assets/gtk/icons/apply.sh"
+lightweight = false
+
+[item.light]
+file = "~/.config/hypr/configs/taste/icons.csv"
+template = "serialization"
+subtemplate = "csv"
+rewrite = true
+hook = "~/.config/hypr/assets/gtk/icons/apply.sh --theme light"
+lightweight = false
+
+# [[item]]
+# file = "~/.config/hypr/configs/taste/theme.csv"
+# template = "serialization"
+# subtemplate = "csv"
+# rewrite = true
+# hook = "~/.config/hypr/assets/gtk/theme/apply.sh"
+# lightweight = false
+# 
+# [item.light]
+# file = "~/.config/hypr/configs/taste/theme.csv"
+# template = "serialization"
+# subtemplate = "csv"
+# rewrite = true
+# hook = "~/.config/hypr/assets/gtk/theme/apply.sh --theme light"
+# lightweight = false
+
+
+[[item]]
+file = "~/.config/hypr/assets/gtk/theme/gtk3"
+template = "gtk-flatcolor"
+subtemplate = "gtk-3"
+rewrite = true
+hook = "~/.config/hypr/assets/gtk/theme/apply.sh check gtk3"
+
+[[item]]
+file = "~/.config/hypr/assets/gtk/theme/gtk2"
+template = "gtk-flatcolor"
+subtemplate = "gtk-2"
+rewrite = true
+hook = "~/.config/hypr/assets/gtk/theme/apply.sh check gtk2"

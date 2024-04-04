@@ -1,0 +1,126 @@
+
+
+//----- Global Properties -----//
+@import "../global.rasi"
+@import "keybinds/typing.rasi"
+
+configuration {
+   show-icons: true;
+   
+   modi: "combi";
+   modes: [
+      "drun",
+      "run"
+   ];
+
+   display-run: "";
+   run-display-format: "{icon}{name}";
+
+   display-drun: "";
+   drun-display-format: "{icon}{name}";
+}
+
+
+window {
+ width: 40%;
+ height: 55%;
+ 
+ // border-radius: 0 0 10px 10px;
+ // border: 0 1px 1px 1px;
+
+ anchor: center;
+ location: center;
+}
+
+mainbox {
+ enabled: true;
+ orientation: vertical;
+ children: [ "inputbar", "listbox" ];
+}
+
+listbox {
+ 	spacing: 20px;
+ 	padding: 0 40px 20px;
+ 	background-color: transparent;
+ 	orientation: vertical;
+ 	children: [ "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+ enabled: true;
+ spacing: 10px;
+ padding: 40px 40px;
+ background-color: transparent;
+ text-color: @foreground;
+ orientation: horizontal;
+ children: [  "entry", "dummy",  "mode-switcher" ];
+}
+entry {
+ placeholder: " Search";
+ 
+ enabled: true;
+ 
+  border: @theme-border;
+  border-color: @foreground;
+  border-radius: @theme-border-radius;
+
+  vertical-align: 0.5;
+  horizontal-align: 0.10;
+  padding: 0 10px 0 10px;
+}
+
+dummy {
+  expand: true;
+  background-color: transparent;
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+ enabled: true;
+
+ spacing: 0.5%;
+ padding: 0.25%;
+
+// border: @theme-border;
+// border-radius: @theme-border-radius;
+}
+
+button {
+ padding: 1.25%;
+ border: @theme-border;
+ border-radius: @theme-border-radius;
+}
+
+
+/*****----- Listview -----*****/
+listview {
+   enabled: true;
+}
+
+/*****----- Elements -----*****/
+element {
+ enabled: true;
+
+ spacing: 1%;
+ padding: 0.5%;
+
+ border: @theme-border;
+ border-radius: @theme-border-radius;
+}
+
+
+
+element-icon {
+   size: 3.5%;
+}
+
+element-text {
+   vertical-align: 0.5;
+}
+
+/*****----- Message -----*****/
+
+textbox {
+  padding: 2.5%;
+}

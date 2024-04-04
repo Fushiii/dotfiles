@@ -1,6 +1,4 @@
-[imports] 
-paths = [ 
-   "generated.toml",
-   "lib/nix.toml",
-   "lib/nixos.toml"
+[imports]
+paths = [
+  "generated.toml"
 ]

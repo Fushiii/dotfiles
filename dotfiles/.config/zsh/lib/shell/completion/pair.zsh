@@ -1,1 +1,1 @@
-zi light hlissner/zsh-autopair
+zi load hlissner/zsh-autopair

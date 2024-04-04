@@ -38,33 +38,42 @@ template = "kakoune"
 rewrite = true
 
 [[item]]
-file = "~/.cache/wal/colors.json"
-template = "firefox"
-rewrite = true
-hook = "pywalfox update"
+file = "~/.config/mako/config"
+template = "mako"
+hook = "makoctl reload"
+
+# [[item]]
+# file = "~/.config/zellij/colors/base16.kdl"
+# template = "zellij"
 
 [[item]]
-file = "~/.Xresources"
-template = "xresources"
+file = "~/.config/taste/wallpaper.csv"
+template = "serialization"
+subtemplate = "csv"
 rewrite = true
-hook = "xrdb -merge ~/.Xresources && ~/.config/hypr/assets/./apply.sh"
+hook = "~/.config/hypr/assets/wallpaper/apply.sh"
+lightweight = false
 
 [item.light]
-file = "~/.Xresources"
-template = "xresources"
+file = "~/.config/taste/wallpaper.csv"
+template = "serialization"
+subtemplate = "csv"
 rewrite = true
-hook = "xrdb -merge ~/.Xresources && ~/.config/hypr/assets/./apply.sh --theme light"
+hook = "~/.config/hypr/assets/wallpaper/apply.sh --theme light"
+lightweight = false
 
 [[item]]
 file = "~/.config/taste/icons.csv"
 template = "serialization"
 subtemplate = "csv"
 rewrite = true
-hook = "~/.icons/./apply.sh"
+# hook = "~/.icons/./apply.sh"
+lightweight = false
 
 [item.light]
 file = "~/.config/taste/icons.csv"
 template = "serialization"
 subtemplate = "csv"
 rewrite = true
-hook = "~/.icons/./apply.sh"
+# hook = "~/.icons/apply.sh"
+lightweight = false
