@@ -1,0 +1,62 @@
+
+
+//----- Global Properties -----//
+@import "../global.rasi"
+@import "keybinds/typing.rasi"
+
+
+window {
+ width: 40%;
+ height: 55%;
+ 
+ anchor: center;
+ location: center;
+}
+
+mainbox {
+ enabled: true;
+ orientation: vertical;
+ children: [ "inputbar", "listbox" ];
+}
+
+listbox {
+ 	padding: 1.25%;
+ 	background-color: transparent;
+ 	orientation: vertical;
+ 	children: [ "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+ enabled: true;
+ padding: 1.25%;
+ background-color: transparent;
+ text-color: @foreground;
+ orientation: horizontal;
+ children: [  "entry" ];
+}
+entry {
+  placeholder: " Search";
+ 
+  enabled: true;
+ 
+  border: @theme-border;
+  border-color: @foreground;
+  border-radius: @theme-border-radius;
+
+  vertical-align: 0.5;
+  horizontal-align: 0.10;
+  padding: 1.25%;
+}
+
+
+
+/*****----- Elements -----*****/
+element {
+ enabled: true;
+
+ padding: 1.25%;
+
+ border: @theme-border;
+ border-radius: @theme-border-radius;
+}

@@ -1,0 +1,14 @@
+[[item]]
+file = "~/.config/rofi/themes/dark/{scheme-slug}.rasi"
+template = "rofi"
+rewrite = true
+
+[item.dark]
+file = "~/.config/rofi/themes/dark/{scheme-slug}.rasi"
+template = "rofi"
+rewrite = true
+
+[item.light]
+file = "~/.config/rofi/themes/light/{scheme-slug}.rasi"
+template = "rofi"
+rewrite = true

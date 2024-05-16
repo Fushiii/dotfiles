@@ -1,1 +1,0 @@
-# zi load thetic/extract

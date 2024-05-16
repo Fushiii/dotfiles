@@ -1,0 +1,101 @@
+
+
+//----- Global Properties -----//
+@import "../../global.rasi"
+@import "../keybinds/non-typing.rasi"
+
+configuration {
+    show-icons:                  true;
+    
+    modi: "combi";
+    modes: [
+         "light:~/.config/hypr/configs/rofi/bin/selector/wallpaper/light.sh",
+         "dark:~/.config/hypr/configs/rofi/bin/selector/wallpaper/dark.sh",
+         "all:~/.config/hypr/configs/rofi/bin/selector/wallpaper/all.sh"
+     ];
+
+   display-dark: "";
+   dark-display-format: "{icon}{name}";
+
+   display-light: "";
+   light-display-format: "{icon}{name}";
+
+   display-all: "󰽢";
+   all-display-format: "{icon}{name}";
+}
+
+
+
+//----- Main Window -----//
+
+window {
+    enabled:                     true;
+    width:                       75%;
+
+    anchor: center;
+    location: west;
+   
+    // Cool effect
+    // It looks like the window comes
+    // from the outside of the viewport.
+    // border: 1px 0 1px 1px;
+    // border-radius: 10px 0 0 10px;
+    border: 1px 1px 1px 0;
+    border-radius: 0 10px 10px 0 ;
+
+}
+
+//----- Main Box -----//
+
+mainbox {
+    enabled:                     true;
+
+    children: [ "mode-switcher",
+        "listview" ];
+
+    padding: 1% 1.5%;
+}
+
+mode-switcher {
+  spacing: 2.5%;
+  padding: 0 0 1.5% 0;
+}
+
+
+button {
+  padding: 2.5%;
+
+  border: @theme-border;
+  border-color: @theme-border-color;
+  border-radius: @theme-border-radius;
+}
+
+//----- Listview -----//
+listview {
+    enabled:                     true;
+    columns:                     5;
+    lines:                       1;
+    spacing:                     0.5%;
+    cycle: true;
+}
+
+
+//----- Elements -----//
+
+
+element {
+    orientation:                 vertical;
+
+}
+element selected.normal {
+   border-color: @selected-normal-foreground;
+}
+
+element-icon {
+     size:                        50%;
+}
+
+
+element-text {
+    enabled: false;
+}

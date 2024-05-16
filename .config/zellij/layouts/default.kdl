@@ -1,0 +1,62 @@
+
+layout {
+    // Note that max_panes also count the 
+    // ones that are inside of this. So, in that case,
+    // you have to bump up the amount of max_panes by the amount here.
+    tab_template name="ui" {
+       pane size=1 borderless=true {
+           plugin location="zellij:compact-bar"
+       }
+
+       children; 
+    }
+
+    swap_tiled_layout {
+        ui max_panes=4 {
+             pane split_direction="vertical" {
+                pane split_direction="horizontal" size="70%" {
+                    pane split_direction="vertical" {
+                        pane
+                        pane
+                    }
+                }
+                pane stacked=true {
+                    children
+                }
+             }
+        }
+
+        ui  {
+             pane split_direction="vertical" {
+                pane split_direction="horizontal" size="70%" {
+                    pane split_direction="horizontal" {
+                        pane split_direction="vertical" {
+                            pane
+                            pane
+                        }
+                        pane
+                    }
+                }
+                pane stacked=true {
+                    children
+                }
+             }
+        }
+
+
+    }
+
+    ui {
+        pane split_direction="vertical" {
+                pane split_direction="horizontal" size="70%" {
+                    pane split_direction="vertical" {
+                        pane
+                    }
+                }
+                pane stacked=true {
+                    children
+                }
+        }
+    }
+}
+

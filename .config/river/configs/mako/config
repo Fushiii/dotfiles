@@ -1,0 +1,23 @@
+anchor=top-center
+default-timeout=5000
+
+# Start flavours
+## Base16 Material Darker
+# Author: Nate Peterson
+#
+# You can use these variables anywhere in the mako configuration file.
+
+background-color=#212121
+text-color=#eeffff
+border-color=#82aaff
+
+[urgency=low]
+background-color=#212121
+text-color=#ffcb6b
+border-color=#82aaff
+
+[urgency=high]
+background-color=#212121
+text-color=#f07178
+border-color=#82aaff
+# End flavours

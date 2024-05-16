@@ -1,0 +1,15 @@
+fpath=(
+    ~/.config/zsh/extern/archive/functions
+    ~/.config/zsh/functions
+    ~/.config/zsh/functions/**/*~*/(CVS)#(/N)
+    "${fpath[@]}"
+)
+
+autoload -Uz archive
+autoload -Uz unarchive
+
+source ~/.config/zsh/extern/archive/init.zsh
+
+
+# This loads all of the files in ~/.config/zsh/lib.
+source ~/.config/zsh/loader.zsh

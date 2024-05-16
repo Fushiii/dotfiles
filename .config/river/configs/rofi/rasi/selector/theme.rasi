@@ -1,0 +1,80 @@
+
+
+//----- Global Properties -----//
+@import "~/.config/river/configs/rofi/global.rasi"
+
+configuration {
+   modi: "dmenu";
+}
+
+
+window {
+ width: 40%;
+ height: 55%;
+ 
+ anchor: center;
+ location: center;
+}
+
+mainbox {
+ enabled: true;
+ padding: 1.5%;
+ spacing: 1.25%;
+ orientation: vertical;
+ children: [ "inputbar", "listbox" ];
+}
+
+listbox {
+ 	spacing: 20px;
+   padding: 0.25%;
+ 	background-color: transparent;
+ 	orientation: vertical;
+ 	children: [ "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+   enabled: true;
+   padding: 0.25%;
+   background-color: transparent;
+   text-color: @foreground;
+   orientation: horizontal;
+   children: [  "entry" ];
+}
+
+entry {
+ placeholder: " Search";
+ 
+ enabled: true;
+ 
+  border: @theme-border;
+  border-color: @foreground;
+  border-radius: @theme-border-radius;
+
+  vertical-align: 0.5;
+  horizontal-align: 0.10;
+  padding:  10px;
+}
+
+
+/*****----- Listview -----*****/
+listview {
+   enabled: true;
+}
+
+/*****----- Elements -----*****/
+element {
+ enabled: true;
+ padding: 1.25%;
+ border: @theme-border;
+ border-radius: @theme-border-radius;
+}
+
+
+
+element-text {
+   vertical-align: 0.5;
+}
+
+/*****----- Message -----*****/
+

@@ -1,0 +1,18 @@
+evaluate-commands %sh{ plugins="$kak_config/bundle"
+  mkdir -p "$plugins"
+  [ ! -e "$plugins/kak-bundle" ] && \
+    git clone -q https://github.com/jdugan6240/kak-bundle "$plugins/kak-bundle"
+  printf "%s\n" "source '$plugins/kak-bundle/rc/kak-bundle.kak'"
+}
+
+bundle-noload kak-bundle https://github.com/jdugan6240/kak-bundle
+
+eval %sh{ kak-tree-sitter -dks --session $kak_session }
+colorscheme base16
+
+set-option global autoreload true
+
+# Load the user configuration.
+# Note this is done after laoding bundle.
+source "%val{config}/user.kak"
+source "%val{config}/linker.kak"

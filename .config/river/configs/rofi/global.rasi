@@ -1,0 +1,42 @@
+@import "./base16.rasi"
+
+configuration {
+	  kb-custom-1: "";
+	  kb-custom-2: "";
+	  kb-custom-3: "";
+	  kb-custom-4: "";
+	  kb-custom-5: "";
+	  kb-custom-6: "";
+	  kb-custom-7: "";
+	  kb-custom-8: "";
+	  kb-custom-9: "";
+	  kb-custom-10: "";
+	  kb-custom-11: "";
+	  kb-custom-12: "";
+	  kb-custom-13: "";
+	  kb-custom-14: "";
+	  kb-custom-15: "";
+	  kb-custom-16: "";
+	  kb-custom-17: "";
+	  kb-custom-18: "";
+	  kb-custom-19: "";
+}
+
+* {
+    theme-border-color: @foreground;
+    theme-border-radius: 10px;
+    theme-border: 1px;
+}
+
+window {
+    border: @theme-border;
+    border-radius: @theme-border-radius;
+    border-color:  @theme-border-color;
+}
+
+element {
+  border: @theme-border;
+  border-color: @theme-border-color;
+  border-radius: @theme-border-radius;
+}
+    

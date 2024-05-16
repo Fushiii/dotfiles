@@ -1,0 +1,11 @@
+# Ignore the build files from nix.
+**/*/result
+**/*/generated.kak
+
+
+# Commonly used caches for shells.
+.niv
+.direnv
+
+# Plugin manager files.
+bundle
